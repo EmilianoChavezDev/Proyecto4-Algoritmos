@@ -1,0 +1,9 @@
+Informe...
+
+El programa utiliza el algoritmo de Dijkstra para localizar y seguir al Rogue. El algoritmo de Dijkstra se implementa para encontrar la ruta más corta entre nodos en un gráfico ponderado. En este caso, se utiliza para calcular la ruta más corta desde la posición actual del Monstruo hasta la ubicación del Rogue.
+
+El algoritmo de Dijkstra se basa en una matriz de adyacencia que representa las conexiones entre los nodos del mapa. La matriz de adyacencia se genera automáticamente mediante la creación de una lista de nodos. Cada nodo en la lista contiene punteros a los nodos vecinos, su posición y un nombre asignado basado en una fórmula específica. La fórmula utiliza la raíz cuadrada del número total de nodos en el mapa para determinar el nombre del nodo. Esta técnica se utiliza debido a que los mapas son cuadrados.
+
+Sin embargo, el algoritmo tiene una limitación en el tamaño del mapa, ya que solo funciona correctamente en matrices de tamaño 10x10. En mapas más grandes, el algoritmo falla antes de comenzar debido a restricciones de rendimiento o memoria.
+
+El funcionamiento del Rogue implica moverse diagonalmente hacia el lado opuesto de la ubicación del Monstruo. Sin embargo, cuando el Rogue encuentra un pasillo, sigue el pasillo en un intento de escapar del Monstruo. La principal debilidad de esta estrategia es que cuando el Rogue llega a una esquina, deja de moverse. Es probable que falle en ese escenario. Sin embargo, su fortaleza radica en que funciona adecuadamente siempre que no se encuentre en una esquina.
